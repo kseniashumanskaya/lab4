@@ -46,11 +46,11 @@ int _strcmp(char* str1, const char* str2) {
 int main () {
 	
 	char str1[300];
-    cout << "enret the string 1:" << endl;	
+    cout << "enter the string 1:" << endl;	
 	cout << gets(str1) << endl;
 
 	char str2[300];
-	cout << "enret the string 2:" << endl;
+	cout << "enter the string 2:" << endl;
 	cout << gets(str2) << endl;
 
 	cout << _strcmp(str1, str2) << endl;	
