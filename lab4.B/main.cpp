@@ -26,7 +26,7 @@ int TheNumberOfWords(char* str) {
 
 int main() {
 	char str[300];
-	cout << "enret the string :" << endl;
+	cout << "enter the string :" << endl;
 	cout << gets(str) << endl;
 	int j = -1;
 	int TheNumberOfDegitsInAWord = 0;
