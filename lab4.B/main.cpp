@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 using namespace std;
 
+const int space = 32;
+
 char* gets(char* s) {
 	int a = getchar();
 	int i;
@@ -17,7 +19,7 @@ char* gets(char* s) {
 int TheNumberOfWords(char* str) {
 	int TheNumberOfWords = 0;
 	for (int i = 0; i < strlen(str); i++) {
-		if ((int)str[i] == 32) {
+		if ((int)str[i] == space) {
 			TheNumberOfWords++;
 		}
 	}
