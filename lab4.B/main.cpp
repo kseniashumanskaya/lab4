@@ -24,18 +24,30 @@ int TheNumberOfWords(char* str) {
 	return TheNumberOfWords;
 }
 
-int main() {
-	char str[300];
-	cout << "enter the string :" << endl;
-	cout << gets(str) << endl;
+void SrtingOutput(char* str3, const char* str1, const char* str2, int i1, int i2) {
+	int i3;
+	for (i3 = 0; i3 < i1; i3++) {
+		str3[i3] = str1[i3];
+	}
+	int k1 = 0;
+	for (i3 = i1; i3 < i1 + i2; i3++) {
+		str3[i3] = str2[k1];
+		k1++;
+	}
+	for (int i = 0; i < i3; i++) {
+		cout << str3[i];
+	}
+}
+
+void OutputNewString(char* str) {
 	int j = -1;
-	int TheNumberOfDegitsInAWord = 0;
-	int TheNumberOfCharactersInAWord = 0;
 	char str1[300];
 	char str2[300];
 	int i1 = 0;
 	int i2 = 0;
 	for (int r = 0; r < TheNumberOfWords(str); r++) {
+		int TheNumberOfDegitsInAWord = 0;
+		int TheNumberOfCharactersInAWord = 0;
 		for (int i = j + 1; str[i] != ' '; i++) {
 			TheNumberOfCharactersInAWord++;
 			if (((int)str[i] < 58) && ((int)str[i] > 47)) {
@@ -57,22 +69,15 @@ int main() {
 				i2++;
 			}
 		}
-		TheNumberOfCharactersInAWord = 0;
-		TheNumberOfDegitsInAWord = 0;
+
 	}
-	str1[i1 + 1] = '\0';
-	str2[i2 + 1] = '\0';
 	char str3[300];
-	int i3;
-	for (i3 = 0; i3 < i1; i3++) {
-		str3[i3] = str1[i3];
-	}
-	int k1 = 0;
-	for (i3 = i1; i3 < i1 + i2; i3++) {
-		str3[i3] = str2[k1];
-		k1++;
-	}
-	for (int i = 0; i < i3; i++) {
-		cout << str3[i];
-	}
+	SrtingOutput(str3, str1, str2, i1, i2);
+}
+
+int main() {
+	char str[300];
+	cout << "enret the string :" << endl;
+	cout << gets(str) << endl;
+	OutputNewString(str);
 }
